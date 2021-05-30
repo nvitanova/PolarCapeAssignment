@@ -1,0 +1,49 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection) or
+# paste cURL into the file and request will be converted to HTTP Request format.
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+PUT http://localhost:8081/api/printbook/edit/120000
+Content-Type: application/json
+
+{
+  "isbn" : 120000,
+
+  "title" : "Booook",
+
+  "year_published" : 1970,
+
+  "book_type" : "PRINT_COPY",
+  "author" : {
+    "id": 3
+  },
+  "pages" : 120,
+  "weight" : 0.26
+
+}
+
+###
+
+PUT http://localhost:8081/api/ebook/edit/12345
+Content-Type: application/json
+
+{
+  "isbn" : 12345,
+
+  "title" : "Book 2",
+
+  "year_published" : 1990,
+
+  "book_type" : "EBOOK",
+  "author" : {
+    "id": 2
+  },
+  "format" : "pdf",
+  "size_mb" : 200
+
+}
+
+###
